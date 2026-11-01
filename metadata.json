@@ -1,0 +1,8 @@
+{
+  "name": "Remix bagevim.az - Bağ Evləri və Villalar",
+  "description": "Abşeronun ən prestijli bağ evləri, villalar və dənizkənarı istirahət məkanlarının icarəsi və satışı üçün premium platforma.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

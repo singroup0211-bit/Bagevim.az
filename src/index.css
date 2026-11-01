@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes marqueeLeft {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @keyframes marqueeRight {
+    0% {
+      transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .animate-marquee-left {
+    animation: marqueeLeft var(--marquee-duration, 40s) linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .animate-marquee-right {
+    animation: marqueeRight var(--marquee-duration, 40s) linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .pause-on-hover:hover {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Smooth font rendering */
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+}
